@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- ===== ===== Custom Css ===== ===== -->
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+    <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
+    <link rel="stylesheet" href="fonts/remixicon.css">
+
+</head>
+
+<body>
+    <!-- ===== ===== Body Main-Background ===== ===== -->
+    <span class="main_bg"></span>
+
+
+    <!-- ===== ===== Main-Container ===== ===== -->
+    <div class="container">
+
+        <!-- ===== ===== Header/Navbar ===== ===== -->
+
+
+
+        <!-- ===== ===== User Main-Profile ===== ===== -->
+        <section class="userProfile card">
+            <div class="profile">
+                <figure><img src="profile.png" alt="profile" width="250px" height="250px"></figure>
+            </div>
+        </section>
+        <!-- ===== ===== User Details Sections ===== ===== -->
+        <section class="userDetails card">
+            <div class="userName">
+                <!-- <input type="text" value={{data.t_name}}> -->
+                {{data.t_name}}
+                <h1 class="name"></h1><br>
+                <div class="map">
+                    <i class="ri-map-pin-fill ri"></i>
+                    <br>
+                    <!-- <input type="text" value={{data.t_post}}> -->
+                    <p><span></span></p>
+                </div>
+                <p>{{ data.t_post}}</p>
+            </div>
+
+
+
+
+        </section>

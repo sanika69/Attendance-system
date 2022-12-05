@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+
+
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+    <script src="{% static 'index.js' %}"></script>
+    <!--<title>Responsive Regisration Form </title>-->
+</head>
+
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="{% url 't_details'  %}" method="post">
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <div class="input-field">
+                        <label>id</label>
+                        <input type="number" name=id placeholder="id" required>
+                    </div>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" name=name placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="userid" name=pid laceholder="Enter your name" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" name=DOB placeholder="Enter birth date" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" name=email placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" name=phno placeholder="Enter mobile number" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select name=gender required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Branch</label>
+                                <select name=branch required>
+                                <option disabled selected>Select Branch</option>
+                                <option>Civil Engineering</option>
+                                <option>Mechanical Engineering</option>
+                                <option>Electrical Engineering</option>
+                                <option>Electronics Engineering</option>
+                                <option>Computer Science and Engineering</option>
+                                <option>Information Technology</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details ID">
+
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Qualification</label>
+                                <select name=ocuupation required>
+                                <option disabled selected>Select Qualification</option>
+                                <option>B.tech</option>
+                                <option>M.tech</option>
+                                <option>Ph.d</option>
+                            </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Post</label>
+                                <select name=post required>
+                                <option disabled selected>Select Post</option>
+                                <option>Assistant Professor</option>
+                                <option>HOD</option>
+                            </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Username</label>
+                                <input type="text" name=id_name placeholder="Username" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Password</label>
+                                <input type="password" name=id_no placeholder="password" required>
+                                <label>Confirm password</label>
+                                <input type="password" name=id_no value="" placeholder="Confirm password" required>
+                            </div>
+                            <div class="wapper">
+
+
+                                <div class="captcha-area">
+                                    <div class="captcha-imp">
+                                        <img src="captcha-bg.png" alt="">
+                                        <span class="captacha"></span>>
+
+                                    </div>
+                                    <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+                                </div>
+                                <!--tn.id_name-->
+                                <form action="{% url 't_details' %}" method="post" class="input-area">
+                                    <input type="text" placeholder="Enter captcha" maxlenght="6" required>
+                                    <button class="chech-btn">Check</button>
+                                </form>
+                                <div class="status-txt"></div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+
+                            <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                        </div>
+                    </div>
+
+
+
+        </form>
+        </div>
+
+</body>
+
+</html>

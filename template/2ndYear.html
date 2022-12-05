@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Build a Survey Form using HTML and CSS
+    </title>
+
+    <style>
+        /* Styling the Body element i.e. Color,
+		Font, Alignment */
+        
+        body {
+            background-image: url('https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg');
+            font-family: Verdana;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* Styling the Form (Color, Padding, Shadow) */
+        
+        form {
+            background-color: rgba(130, 193, 245, 0.267);
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.568);
+        }
+        /* Styling form-control Class */
+        
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        /* Styling form-control Label */
+        
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* Styling form-control input,
+		select, textarea */
+        
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 6px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+        /* Styling form-control Radio
+		button and Checkbox */
+        
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+        /* Styling Button */
+        
+        button {
+            background-color: #edf3f0;
+            border: 1px solid #777;
+            border-radius: 20px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+
+    <!-- Create Form -->
+    <form id="form" action="{% url 'sy_form' %}" method="POST">
+        {% csrf_token %}
+        <!-- dropdown -->
+        <div class="form-control">
+            <label>Semsester</label>
+            <select name="semester" required>
+                <option disabled selected>Select Semsester</option>
+                <option>3rd Semsester</option>
+                <option>4th Semsester</option>
+               
+            </select>
+        </div>
+
+
+        <!-- Details -->
+        <div class=" form-control ">
+            <label for="name " id="label-name ">
+				Course Name
+			</label>
+
+            <!-- Input Type Text -->
+            <input type="text " id="name" name="name">
+        </div>
+
+        <div class="form-control ">
+            <label for="email " id="label-email">
+				Code
+			</label>
+
+            <!-- Input Type Email-->
+            <input type="text " id="email" name="code" />
+        </div>
+
+        <div class=" form-control ">
+            <label for="age " id="label-age">
+				Credit
+			</label>
+
+            <!-- Input Type Text -->
+            <input type="number " id="age " name="credit" />
+        </div>
+
+
+
+
+
+
+        </div>
+
+        <!-- Multi-line Text Input Control -->
+        <button type="submit " value="submit ">
+			Submit
+		</button>
+    </form>
+</body>
+
+</html>

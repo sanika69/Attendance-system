@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- ===== ===== Custom Css ===== ===== -->
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+    <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
+    <link rel="stylesheet" href="fonts/remixicon.css">
+
+</head>
+
+<body>
+    <!-- ===== ===== Body Main-Background ===== ===== -->
+    <span class="main_bg"></span>
+
+
+    <!-- ===== ===== Main-Container ===== ===== -->
+    <div class="container">
+
+        <!-- ===== ===== Header/Navbar ===== ===== -->
+
+
+
+        <!-- ===== ===== User Main-Profile ===== ===== -->
+        <section class="userProfile card">
+            <div class="profile">
+                <figure><img src="profile.png" alt="profile" width="250px" height="250px"></figure>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== Work & Skills Section ===== ===== -->
+        <section class="work_skills card">
+
+            <!-- ===== ===== Work Contaienr ===== ===== -->
+            <div class="work">
+                <!-- <h1 class="heading">work</h1> -->
+
+
+                <h1 class="heading">Contact Information</h1>
+                <ul>
+                    <li class="phone">
+                        <h1 class="label">ID:</h1>
+                        <!-- <input type="text" value={{data.t_phno}}> -->
+                        <span class="info">{{data.t_id}}</span>
+                    </li>
+                    <li class="phone">
+                        <h1 class="label">Phone:</h1>
+                        <!-- <input type="text" value={{data.t_phno}}> -->
+                        <span class="info">{{data.t_phno}}</span>
+                    </li>
+
+                    <!-- <li class="address">
+                        <h1 class="label">Address:</h1>
+                        <span class="info"></span>
+                    </li> -->
+
+                    <li class="email">
+                        <h1 class="label">E-mail:</h1>
+                        <!-- <input type="text" value={{data.t_mail}}> -->
+                        <span class="info">{{data.t_mail}}</span>
+                    </li>
+
+                    <li class="site">
+                        <h1 class="label">Site:</h1>
+                        <span class="info"></span>
+                    </li>
+                </ul>
+                <div class="basic_info">
+                    <h1 class="heading">Basic Information</h1>
+                    <ul>
+                        <li class="birthday">
+                            <h1 class="label">Birth Date:</h1>
+
+                            {{data.t_DOB}}
+                            <!-- <span class="info">{{data.t_DOB}}</span> -->
+                        </li>
+
+                        <input class="sex">
+                        <h1 class="label">Gender:</h1>
+                        <!-- print{hi}; -->
+                        <!-- {{data.t_Gender}} -->
+                        <!-- <input type="text" value={{data.t_Gender}}> -->
+                        <span class="info">{{data.t_Gender}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== User Details Sections ===== ===== -->
+        <section class="userDetails card">
+            <div class="userName">
+                <!-- <input type="text" value={{data.t_name}}> -->
+                {{data.t_name}}
+                <h1 class="name"></h1><br>
+                <div class="map">
+                    <i class="ri-map-pin-fill ri"></i>
+                    <br>
+                    <!-- <input type="text" value={{data.t_post}}> -->
+                    <p><span></span></p>
+                </div>
+                <p>{{ data.t_post}}</p>
+            </div>
+
+
+
+
+        </section>
+
+
+        <!-- ===== ===== Timeline & About Sections ===== ===== -->
+        <section class="timeline_about card">
+            <div class="tabs">
+                <ul>
+
+
+                    <li class="about active">
+                        <i class="ri-user-3-fill ri"></i>
+                        <span>About</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-div">
+                <button class="btt" id="add">
+                    <span>Add Notes</span>
+                </button>
+            </div>
+            <div class="add"></div>
+
+        </section>
+    </div>
+
+</body>
+<script src="static/js/index2.js"></script>
+
+</html>
